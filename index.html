@@ -187,6 +187,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-踩坑 -iOS -总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -388,6 +399,88 @@
 
 
   
+    <article id="post-test1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/26/test1/">Collection 开发碰到的坑</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/26/test1/" class="archive-article-date">
+  	<time datetime="2017-07-26T10:06:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><h2 id="cell-上的按钮点击删除cell遇到的问题"><a href="#cell-上的按钮点击删除cell遇到的问题" class="headerlink" title="cell 上的按钮点击删除cell遇到的问题"></a>cell 上的按钮点击删除cell遇到的问题</h2><p>创建博客，有机会可以写点东西，做点笔记，虽然我一般都没写过；</p>
+<p>在cell中加按钮，点击按钮删除cell的时候，如果利用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ [collectionView deleteItemsAtIndexPaths:@[indexP]];</span><br></pre></td></tr></table></figure>
+<p>直接删除cell会崩溃，因为在此时代理方法获取到的indexPath并不是准确的，是删除之前的indexPath;</p>
+<p>这是不能利用代理传入的indexPath来进行操作，需要根据cell  来获取indexPath</p>
+<p>如果只有按钮，就利用按钮的superView来获取</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  NSIndexPath *indexP = [_collectionView indexPathForCell:cell];</span><br><span class="line">$  [self.collectionView deleteItemsAtIndexPaths:@[indexP]];</span><br></pre></td></tr></table></figure>
+<p>这样就解决了 indexPath不准确的问题。</p>
+<p>小结: 这个问题的主要症结在于，调用 ‘deleteItemsAtIndexPaths:’ 并不会调用 ‘cellForItemAtIndexPath’ 这个方法来更新indexPath，这样即使自己在代理方法里做了根据indexPath记录indexPath的代码也不会有反应。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-踩坑 -iOS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/26/test1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -479,6 +572,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">-踩坑 -iOS -总结</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-踩坑 -iOS</a>
