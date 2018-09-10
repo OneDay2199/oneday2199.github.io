@@ -179,7 +179,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <a id="more"></a>
+
       
 
       
@@ -258,14 +259,9 @@
       
         <p>Welcome to <a href="https://oneday2199.github.io" target="_blank" rel="noopener">OneDay’s blog</a>!  </p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
+          <a class="article-more-a" href="/2018/08/31/hello-world/#more">more >></a>
+        
       
 
       
@@ -343,14 +339,9 @@
 <blockquote>
 <p>特此记录</p>
 </blockquote>
-<h2 id="不同位数机器的字节数"><a href="#不同位数机器的字节数" class="headerlink" title="不同位数机器的字节数"></a>不同位数机器的字节数</h2><p>可用如sizeof（char),sizeof(char*)等得出</p>
-<ul>
-<li><p>32位编译器<br>char ：1个字节<br>char*（即指针变量）: 4个字节（32位的寻址空间是2^32, 即32个bit，也就是4个字节。同理64位编译器）<br>short int : 2个字节<br>int：  4个字节<br>unsigned int : 4个字节<br>float:  4个字节<br>double:   8个字节<br>long:   4个字节<br>long long:  8个字节<br>unsigned long:  4个字节</p>
-</li>
-<li><p>64位编译器<br>char ：1个字节<br>char*(即指针变量): 8个字节<br>short int : 2个字节<br>int：  4个字节<br>unsigned int : 4个字节<br>float:  4个字节<br>double:   8个字节<br>long:   8个字节<br>long long:  8个字节<br>unsigned long:  8个字节</p>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2017/12/15/171215/#more">more >></a>
+        
       
 
       
@@ -363,11 +354,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
         		</li>
       		
 		</ul>
@@ -431,12 +422,9 @@
 <p>在cell中加按钮，点击按钮删除cell的时候，如果利用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ [collectionView deleteItemsAtIndexPaths:@[indexP]];</span><br></pre></td></tr></table></figure>
 <p>直接删除cell会崩溃，因为在此时代理方法获取到的indexPath并不是准确的，是删除之前的indexPath;</p>
-<p>这是不能利用代理传入的indexPath来进行操作，需要根据cell  来获取indexPath</p>
-<p>如果只有按钮，就利用按钮的superView来获取</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  NSIndexPath *indexP = [_collectionView indexPathForCell:cell];</span><br><span class="line">$  [self.collectionView deleteItemsAtIndexPaths:@[indexP]];</span><br></pre></td></tr></table></figure>
-<p>这样就解决了 indexPath不准确的问题。</p>
-<p>小结: 这个问题的主要症结在于，调用 ‘deleteItemsAtIndexPaths:’ 并不会调用 ‘cellForItemAtIndexPath’ 这个方法来更新indexPath，这样即使自己在代理方法里做了根据indexPath记录indexPath的代码也不会有反应。</p>
-
+        
+          <a class="article-more-a" href="/2017/07/26/test1/#more">more >></a>
+        
       
 
       
@@ -449,11 +437,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
         		</li>
       		
 		</ul>
@@ -586,15 +574,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
               </li>
              
               <li class="article-tag-list-item">
