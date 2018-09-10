@@ -17,7 +17,7 @@
 <meta property="og:description" content="32位与64位 的数据类型对比本次遇到的问题&amp;emsp;&amp;emsp;在开发中，用到一个 NSInteger 的变量，但是长度在某些情况下超过了 NSInteger 的范围，造成了部分数据的访问不正常。&amp;emsp;&amp;emsp; iOS 中对 NSInteger 的定义&amp;emsp;&amp;emsp;在苹果的 api 实现中，NSInteger 是一个封装，它会识别当前操作系统的位数，自动返回最大的类型。&amp;e">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/img/1D6EC86E-5D2A-4C60-8FA0-2084A95BE88E.png">
-<meta property="og:updated_time" content="2018-09-10T08:53:41.394Z">
+<meta property="og:updated_time" content="2018-09-10T09:00:23.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 中 32位与64位 数据类型的问题">
 <meta name="twitter:description" content="32位与64位 的数据类型对比本次遇到的问题&amp;emsp;&amp;emsp;在开发中，用到一个 NSInteger 的变量，但是长度在某些情况下超过了 NSInteger 的范围，造成了部分数据的访问不正常。&amp;emsp;&amp;emsp; iOS 中对 NSInteger 的定义&amp;emsp;&amp;emsp;在苹果的 api 实现中，NSInteger 是一个封装，它会识别当前操作系统的位数，自动返回最大的类型。&amp;e">
@@ -186,7 +186,6 @@
 <blockquote>
 <p>特此记录</p>
 </blockquote>
-<a id="more"></a>
 <h2 id="不同位数机器的字节数"><a href="#不同位数机器的字节数" class="headerlink" title="不同位数机器的字节数"></a>不同位数机器的字节数</h2><p>可用如sizeof（char),sizeof(char*)等得出</p>
 <ul>
 <li><p>32位编译器<br>char ：1个字节<br>char*（即指针变量）: 4个字节（32位的寻址空间是2^32, 即32个bit，也就是4个字节。同理64位编译器）<br>short int : 2个字节<br>int：  4个字节<br>unsigned int : 4个字节<br>float:  4个字节<br>double:   8个字节<br>long:   4个字节<br>long long:  8个字节<br>unsigned long:  4个字节</p>
@@ -424,11 +423,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
             
             <div class="clearfix"></div>
