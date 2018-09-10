@@ -1,19 +1,210 @@
-extends partial/layout
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  
+  <title>  Tags: 踩坑 |   hexo-theme-nayo </title>
 
-block site_title
-    != page.tag + " · " + config.title
+ 
+  
+    <link rel="icon" href="/images/favicon.png">
+  
 
-block description
-    - var desc = __("Tags")+': ' + page.tag + ' - ' + config.title;
-    meta(name="description", content=desc)
 
-block content
-    .autopagerize_page_element: .content
-        .archive.animated.fadeInDown
-            ul.list-with-title
-                p.post-title
-                    != __("Tags")+' ' + page.tag
-                include mixins
-                +postList()
-                include mixins
-                +make_pager(__('prev'), __('next'))
+  <link rel="stylesheet" href="/nayo.min.css"> 
+</head>  
+  <body>   
+    
+      <header class="header">
+	
+  <nav class="header-nav">        
+
+    <span class="iconfont icon-menu mobile-toggle"></span>   	
+
+    <div class="header-menu">          
+              
+          
+            <a class="header-menu-link" id="header-menu-home" href="/">
+              <i class="iconfont icon-home">  
+
+              <span class="header-menu-title">Home</span>
+            </i></a>     
+          
+              
+          
+            <a class="header-menu-link" id="header-menu-archives" href="/archives">
+              <i class="iconfont icon-archives">  
+
+              <span class="header-menu-title">Archives</span>
+            </i></a>     
+          
+              
+          
+            <a class="header-menu-link" id="header-menu-tags" href="/tags">
+              <i class="iconfont icon-tags">  
+
+              <span class="header-menu-title">Tags</span>
+            </i></a>     
+          
+              
+          
+            <a class="header-menu-link" id="header-menu-about" href="/about">
+              <i class="iconfont icon-about">  
+
+              <span class="header-menu-title">About</span>
+            </i></a>     
+          
+              
+          
+            <a class="header-menu-link" id="header-menu-search">
+              <i class="iconfont icon-search">  
+            </i></a>
+          
+                  
+    </div>  
+    
+  </nav>
+</header>
+
+   
+
+      <div class="container">       
+          
+          
+            <section class="main slideDownMin">
+          
+
+          <section>
+  
+
+      <span class="page-title"># 踩坑</span>   
+        
+             
+
+            	
+
+	   
+
+	   <article class="item slideDownMin">   	
+
+        <time class="item-date"> 2017-12-15</time>    
+
+        <a class="item-title" href="/2017/12/15/171215/">iOS 中 32位与64位 数据类型的问题</a>
+
+      </article>
+
+       
+
+             
+
+            	
+
+	   
+
+	   <article class="item slideDownMin">   	
+
+        <time class="item-date"> 2017-07-26</time>    
+
+        <a class="item-title" href="/2017/07/26/test1/">Collection 开发碰到的坑</a>
+
+      </article>
+
+       
+
+        
+
+    
+</section>
+          </section> 
+      </div>            
+    
+    <a id="backTop">
+      <span>
+        <i class="iconfont icon-backtotop"></i>
+      </span>
+    </a> 
+
+  
+    
+    <div class="search-container sildeUpMin">
+        <div class="search-header">
+            <input type="text" placeholder="Typing Something here." id="search-input" class="search-input">
+            <span class="search-cancel">
+                <i class="iconfont icon-cancel">
+            </i></span>
+        </div>
+        <div id="search-result" class="search-result"></div>
+    </div>
+ 
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon" src="/images/favicon.png">   
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">Home
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">Archives
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">Tags
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">About
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">Search </a>                 
+            
+         
+      
+</div>        
+    
+
+
+
+     
+    
+
+
+
+
+<footer id="footer">	    
+
+		
+		<div class="footer-copyright">
+		&copy;
+		
+		2018		
+	
+		Lemon
+		<br>
+
+		Theme By
+		<a href="https://github.com/Lemonreds/hexo-theme-Nayo" target="_blank">Nayo</a>	
+		</div>			
+	 
+</footer>   
+
+  
+
+    <script src="/nayo.bundle.js"></script>           
+  </body>        
+</html>
