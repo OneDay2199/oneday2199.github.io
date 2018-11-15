@@ -166,13 +166,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/31/180831/">180831</a>
+      <a class="article-title" href="/2018/11/15/180831/">180831</a>
     </h1>
   
 
         
-        <a href="/2018/08/31/180831/" class="archive-article-date">
-  	<time datetime="2018-08-31T09:47:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
+        <a href="/2018/11/15/180831/" class="archive-article-date">
+  	<time datetime="2018-11-15T08:09:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-15</time>
 </a>
         
       </header>
@@ -183,11 +183,11 @@
 <p>安装后，查看版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip --version</span><br></pre></td></tr></table></figure></p>
 <h2 id="安装-Python-MySQL"><a href="#安装-Python-MySQL" class="headerlink" title="安装 Python-MySQL"></a>安装 Python-MySQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install mysql-connector-c</span><br><span class="line">$ sudo pip install MySQL-python</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install MySQL-python</span><br></pre></td></tr></table></figure>
-<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ ld: library not found <span class="keyword">for</span> -lssl</span><br><span class="line">$ clang: error: linker <span class="built_in">command</span> failed with <span class="built_in">exit</span> code 1 (use -v to see invocation)</span><br><span class="line">$ error: <span class="built_in">command</span> <span class="string">'cc'</span> failed with <span class="built_in">exit</span> status 1</span><br></pre></td></tr></table></figure>
+<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><h3 id="错误一"><a href="#错误一" class="headerlink" title="错误一"></a>错误一</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ ld: library not found <span class="keyword">for</span> -lssl</span><br><span class="line">$ clang: error: linker <span class="built_in">command</span> failed with <span class="built_in">exit</span> code 1 (use -v to see invocation)</span><br><span class="line">$ error: <span class="built_in">command</span> <span class="string">'cc'</span> failed with <span class="built_in">exit</span> status 1</span><br></pre></td></tr></table></figure>
 <p>原因因为没有安装 libxml2 和libxslt 两个库<br>下面是安装方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ brew install libxml2 </span><br><span class="line">$ brew install libxslt </span><br><span class="line">$ brew link libxml2 --force </span><br><span class="line">$ brew link libxslt --force</span><br><span class="line">$ pip install lxml</span><br></pre></td></tr></table></figure></p>
 <p>安装成功后，重新执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install MySQL-python</span><br></pre></td></tr></table></figure>
-<p>安装 mysql-connector 报错<br>先通过取消链接mysql ，然后安装，安装后再次链接mysql 执行安装MySQL-python</p>
+<h3 id="错误二"><a href="#错误二" class="headerlink" title="错误二"></a>错误二</h3><p>安装 mysql-connector 报错<br>先通过取消链接mysql ，然后安装，安装后再次链接mysql 执行安装MySQL-python</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew unlink mysql</span><br><span class="line">$ brew link --overwrite mysql</span><br></pre></td></tr></table></figure>
 
       
@@ -202,11 +202,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">踩坑</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -216,7 +216,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/31/180831/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/15/180831/">展开全文 >></a>
         </p>
       
 
@@ -594,19 +594,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">踩坑</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
